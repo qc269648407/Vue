@@ -10,11 +10,14 @@
 <script>
   export default {
     directives: {
+      //指令主体
       touch: {
         inserted: function(el, value) {
           let _t = this;
           console.info(value);
+          //添加按下事件
           el.addEventListener("touchstart", touchstart);
+          //添加抬起事件
           el.addEventListener("touchend", touchend);
   
           function touchstart() {
